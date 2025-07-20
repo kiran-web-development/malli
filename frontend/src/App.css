@@ -1,9 +1,4 @@
-/* Hide default cursor only on desktop */
-@media (min-width: 768px) {
-  * {
-    cursor: none !important;
-  }
-}
+/* Custom cursor is handled by the CustomCursor component */
 
 /* BigFish Design System Implementation */
 :root {
