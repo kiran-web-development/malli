@@ -22,6 +22,35 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center">
+          {/* Profile Image with Border Styles */}
+          <div className="mb-12 flex justify-center">
+            <div className="relative group">
+              {/* Animated gradient border */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-light-pink via-mid-purple to-mid-blue rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+              
+              {/* Secondary glow effect */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-mid-blue via-light-pink to-mid-purple rounded-full blur-md opacity-50 animate-pulse delay-1000"></div>
+              
+              {/* Main image container */}
+              <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64">
+                <div className="w-full h-full bg-gradient-to-br from-light-pink to-mid-purple p-1 rounded-full">
+                  <div className="w-full h-full bg-white p-2 rounded-full">
+                    <img 
+                      src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAoACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKyNDH1LWNPsLhLO7u44Z5BuSMnlgPQAZJr478a/tOa8uqXen6RoE80cMrpGbmfYZdrbgW2hgAcHAz6V9ja7fto6VPqLQNJ9mKxRbhj5jsqgH64z+FfGmsXt7quqXWpXmqXE9zPKZZJXJZmbtjAAx6YAwOlacjc/VHx0fANj8EPhhJ4k8MSjVb1r2K3ubV8r+9kz8wIAwAFPp1HrXxZ+0X+0Z4g+POovJeO9j4fhZjFpsLfKgB+9N6uRxzwO3JJNYGv8AtO+PPF1paaTrlzF/ZUMwk+ySWsYZkOcMkoYgnrggZrI1z9mn4YeKzPNoHiiWxmdhtnhv7oNx2baVT81NOa7nPP2bhHleGfgUPIi1vWJcR8CU3LqcdQCFkByeoxSfEv4CXngHwRrOvaXrVvq0NnGJPIjTDSMxAUKeQCcDkjpW/wDH79lH4dfsz2n2rxd4tn1PSVxuvUuISUVvSSQBnH1bNdZ+z/q9rqP7NGgeIbOEwQyaTbziEkHYXjjYr+BIHHTOMVLS1XVf1dmnHWCd/Q+E/A/7Y3jjUfHVt4T8SWdr4a8T3EhihurQ/vY5CejJnaxrP8W/tv8Aiq88S3em6HL/AKFCzBbuZcthQcLy2ASC2AfauG+KnxMvfFl3/Ztq53WbM94B2kx8oP8AsKAR7EkVw9enpk/P0Oa6KdHnsUubWTb3PLlJrcKK9H+Enh/TfF3j/TNO1O5FtaXEiCSSUhVCqc7iT6ADnnvXtWm/sNfELUZlhEWm2Ll1TCHzZASTj7ysuCf93NdiVnudEYJo//Z"
+                      alt="Golla Mallikarjuna"
+                      className="w-full h-full object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                
+                {/* Floating accent elements */}
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-light-pink rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-mid-blue rounded-full animate-pulse delay-500"></div>
+                <div className="absolute top-1/2 -right-4 w-4 h-4 bg-mid-purple rounded-full animate-pulse delay-1000"></div>
+              </div>
+            </div>
+          </div>
+
           {/* Name and Title */}
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-4 gradient-text">
