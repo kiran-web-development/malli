@@ -1,34 +1,315 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Hide default cursor */
+* {
+  cursor: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* BigFish Design System Implementation */
+:root {
+  /* Foundation Colors */
+  --color-black: #151515;
+  --color-white: #fff;
+  --color-dark-grey: #717171;
+  --color-mid-grey: #aaa;
+  --color-grey: #b6cbcb;
+  
+  /* Vibrant Brand Colors */
+  --color-dark-blue: #1f47e6;
+  --color-mid-blue: #88a2ff;
+  --color-light-blue: #b7fbff;
+  --color-mid-pink: #ff84e4;
+  --color-light-pink: #ffd1e7;
+  --color-mid-purple: #d987ff;
+  --color-mid-yellow: #ffe03d;
+  --color-light-yellow: #f6fd87;
+  --color-dark-orange: #d1903a;
+  --color-mid-orange: #ff965a;
+  --color-dark-green: #a1a500;
+  --color-mid-green: #78d692;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Custom CSS Variables for Tailwind */
+.bg-light-pink { background-color: var(--color-light-pink); }
+.bg-mid-pink { background-color: var(--color-mid-pink); }
+.bg-mid-blue { background-color: var(--color-mid-blue); }
+.bg-light-blue { background-color: var(--color-light-blue); }
+.bg-mid-purple { background-color: var(--color-mid-purple); }
+.bg-mid-yellow { background-color: var(--color-mid-yellow); }
+.bg-light-yellow { background-color: var(--color-light-yellow); }
+.bg-mid-orange { background-color: var(--color-mid-orange); }
+.bg-mid-green { background-color: var(--color-mid-green); }
+.bg-dark-green { background-color: var(--color-dark-green); }
+.bg-dark-grey { background-color: var(--color-dark-grey); }
+.bg-mid-grey { background-color: var(--color-mid-grey); }
+.bg-grey { background-color: var(--color-grey); }
+
+.text-light-pink { color: var(--color-light-pink); }
+.text-mid-pink { color: var(--color-mid-pink); }
+.text-mid-blue { color: var(--color-mid-blue); }
+.text-light-blue { color: var(--color-light-blue); }
+.text-mid-purple { color: var(--color-mid-purple); }
+.text-mid-yellow { color: var(--color-mid-yellow); }
+.text-light-yellow { color: var(--color-light-yellow); }
+.text-mid-orange { color: var(--color-mid-orange); }
+.text-mid-green { color: var(--color-mid-green); }
+.text-dark-green { color: var(--color-dark-green); }
+.text-dark-grey { color: var(--color-dark-grey); }
+.text-mid-grey { color: var(--color-mid-grey); }
+.text-grey { color: var(--color-grey); }
+
+.border-light-pink { border-color: var(--color-light-pink); }
+.border-mid-pink { border-color: var(--color-mid-pink); }
+.border-mid-blue { border-color: var(--color-mid-blue); }
+.border-mid-purple { border-color: var(--color-mid-purple); }
+.border-mid-green { border-color: var(--color-mid-green); }
+
+/* Service Button Component */
+.service-button {
+  border-radius: 9999px; /* rounded-full */
+  padding: 0.25rem 0.75rem;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.0875em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-link {
-    color: #61dafb;
+.service-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Navigation Links */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link:focus {
+  outline: 2px solid var(--color-light-pink);
+  outline-offset: 2px;
+}
+
+/* CTA Button Component */
+.cta-button {
+  border-radius: 9999px; /* rounded-full */
+  padding: 0.625rem 1.375rem;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.0875em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+.cta-button.large {
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+}
+
+/* Project Card Component */
+.project-card {
+  border-radius: 0.75rem; /* rounded-xl */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography System */
+.font-display {
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Loading Animation */
+.loading-dots {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-light-pink), var(--color-mid-purple), var(--color-mid-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Utilities */
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Portfolio Specific Styles */
+.portfolio-container {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-light-pink), var(--color-mid-purple));
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+/* Section Spacing */
+section {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
+}
+
+/* Interactive Elements */
+.interactive:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid var(--color-light-pink);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-light-pink);
+  color: var(--color-black);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-pink);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mid-pink);
 }
