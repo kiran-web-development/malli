@@ -221,6 +221,15 @@ html {
   animation: bounce 2s infinite;
 }
 
+/* Animation delay utilities */
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
 /* Loading Animation */
 .loading-dots {
   display: inline-block;
