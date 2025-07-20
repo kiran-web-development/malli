@@ -7,8 +7,8 @@ import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
 import CertificationsSection from '../components/CertificationsSection';
 import ContactSection from '../components/ContactSection';
-// import CustomCursor from '../components/CustomCursor';
-// import InteractiveBackground from '../components/InteractiveBackground';
+import CustomCursor from '../components/CustomCursor';
+import InteractiveBackground from '../components/InteractiveBackground';
 
 const Portfolio = () => {
   useEffect(() => {
@@ -23,8 +23,8 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio-container">
-      {/* <CustomCursor />
-      <InteractiveBackground /> */}
+      <CustomCursor />
+      <InteractiveBackground />
       
       <Header />
       
