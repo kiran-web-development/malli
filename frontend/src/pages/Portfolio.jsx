@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+// import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
@@ -7,8 +7,8 @@ import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
 import CertificationsSection from '../components/CertificationsSection';
 import ContactSection from '../components/ContactSection';
-import CustomCursor from '../components/CustomCursor';
-import InteractiveBackground from '../components/InteractiveBackground';
+// import CustomCursor from '../components/CustomCursor';
+// import InteractiveBackground from '../components/InteractiveBackground';
 
 const Portfolio = () => {
   useEffect(() => {
@@ -22,14 +22,9 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <motion.div 
-      className="portfolio-container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
-      <CustomCursor />
-      <InteractiveBackground />
+    <div className="portfolio-container">
+      {/* <CustomCursor />
+      <InteractiveBackground /> */}
       
       <Header />
       
@@ -41,7 +36,7 @@ const Portfolio = () => {
         <CertificationsSection />
         <ContactSection />
       </main>
-    </motion.div>
+    </div>
   );
 };
 
